@@ -1,0 +1,258 @@
+@import "./button";
+@import "./color";
+@import "./flex";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* nav alanı başlangıç*/
+nav {
+  @include flex;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+  .navigation {
+    @include flex;
+    gap: 30px;
+    font-size: 25px;
+    a {
+      color: gray;
+      text-shadow: 2px 2px 3px;
+
+      &:hover {
+        color: $secondary-color;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+/* navbar alanı bitiş*/
+
+/* main alanı Başlangıç */
+main {
+  margin: 100px;
+  .container {
+    width: 100%;
+    height: 70vh;
+
+    .css {
+      @include flex;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      border-radius: 10px;
+      .images {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      .css-sec {
+        text-align: center;
+        flex: 1;
+
+        h3 {
+          color: $primary-color;
+          font-size: 35px;
+        }
+        p {
+          color: gray;
+        }
+      }
+    }
+    .vs {
+      text-align: center;
+      font-size: 55px;
+      color: $text-color;
+
+      span {
+        color: $primary-color;
+      }
+    }
+    .sass {
+      @include flex;
+      flex-direction: row-reverse;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      border-radius: 10px;
+      .images {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+      .sass-sec {
+        flex: 1;
+        text-align: center;
+        h3 {
+          color: $text-color;
+          font-size: 35px;
+        }
+        p {
+          color: gray;
+        }
+      }
+    }
+  }
+  /*İnfo alanı başlangıç*/
+  .info {
+    height: 50vh;
+    width: 100%;
+    background-color: #8ec5fc;
+    background-image: linear-gradient(62deg, #364a5e 0%, #e0c3fc 100%);
+
+    background-size: cover;
+    border-radius: 10px;
+    @include flex;
+    gap: 20px;
+    .info-sec {
+      text-align: center;
+      @include flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 400px;
+
+      h1 {
+        color: white;
+      }
+      p {
+        color: rgb(82, 79, 79);
+      }
+      button {
+        @include button;
+      }
+    }
+  }
+
+  /* form alanı */
+
+  .form-area {
+    @include flex;
+    height: 40vh;
+    width: 100%;
+    margin-top: 100px;
+
+    .images {
+      display: flex;
+      flex-direction: column;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 50%;
+      text-align: end;
+
+      input {
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+      label {
+        color: #364a5e;
+      }
+      .btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        button {
+          border: none;
+          padding: 20px 60px;
+          background-color: #fa8bff;
+          background-image: linear-gradient(
+            45deg,
+            #fa8bff 0%,
+            #2bd2ff 52%,
+            #2bff88 90%
+          );
+
+          font-size: 60px;
+          color: white;
+          white-space: nowrap;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  /* form alanı bitiş */
+}
+/* main alanı bitiş */
+
+/* footer alanı başlangıç */
+
+/* footer alanı bitiş */
+footer {
+  width: 100%;
+  height: 50vh;
+  background-color: gray;
+  position: relative;
+  @include flex;
+  .footer-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 60%;
+      height: 200px;
+      border-bottom: 2px solid black;
+      span {
+        font-size: 30px;
+        color: white;
+      }
+    }
+    .footer-info {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin-top: 10px;
+      span {
+        color: white;
+        font-size: 20px;
+      }
+
+      .social-media {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 50px;
+      }
+      .logo {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        a {
+          font-size: 20px;
+          color: white;
+        }
+      }
+    }
+
+    .footer-bottom {
+      display: flex;
+      width: 100%;
+      height: 100px;
+      justify-content: space-around;
+      align-items: center;
+
+      position: absolute;
+      bottom: 0;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      .footer-nav {
+        display: flex;
+        gap: 30px;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
